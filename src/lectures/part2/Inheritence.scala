@@ -6,6 +6,11 @@ object Inheritence extends App{
   val john = new Adult(name = "john",26,1002)
   marry.print
   john.print
+
+  val dog =new Dod
+  dog.sound
+  dog.eat
+
 }
 
 object Person{
@@ -20,3 +25,16 @@ class Adult(override val name: String, override val age: Int, val id: Int) exten
   override def print: Unit = println(name,age,id)
 }
 
+abstract class Animal{
+  def eat: Unit
+}
+
+trait Sound{
+  def sound: Unit
+}
+
+class Dod extends Animal with Sound{
+  override def eat: Unit = println("dog eat meal")
+
+  override def sound: Unit = println("Dog Barks")
+}
