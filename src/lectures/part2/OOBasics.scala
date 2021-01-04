@@ -1,13 +1,13 @@
 package lectures.part2
 
-object OOBasics extends App{
-  val person = new Person("Prabh",26)
+object OOBasics {
+  val person = new Person1("Prabh",26)
   person.greet("John")
-  val empty=new Person()
+  val empty=new Person1()
   empty.greet()
 }
 
-class Person(name: String="", val age: Int=0){
+class Person1(name: String="", val age: Int=0){
   def greet(name: String): Unit =
     println(s"${this.name} says: Hi $name")
 
